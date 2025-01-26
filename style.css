@@ -1,0 +1,131 @@
+body {
+    font-family: sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(-45deg, #334eff, #6600ff, #0084ff, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+.container {
+    width: 80%;
+    max-width: 800px;
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.chat-area {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.message {
+    max-width: 70%;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+    word-wrap: break-word;
+}
+
+.user-message {
+    background-color: #4a4a4a;
+    align-self: flex-end;
+}
+
+.ai-message {
+    background-color: #3a3a3a;
+    align-self: flex-start;
+    line-height: 1.6;
+}
+
+.input-area {
+    display: flex;
+    margin-top: 10px;
+}
+
+.input-area input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3a3a3a;
+    color: #fff;
+    margin-right: 5px;
+}
+
+.input-area button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #5a5a5a;
+    color: #fff;
+    cursor: pointer;
+}
+
+.loading-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.loading-spinner {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid #fff;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 5px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.logo {
+    width: 50px;
+    height: auto;
+    font-size: 50px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.logo-text {
+    font-size: 20px;
+    position: absolute;
+    top: 25px;
+    left: 75px;
+}
+
+.role-area {
+    display: flex;
+} 
